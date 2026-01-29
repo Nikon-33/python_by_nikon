@@ -17,9 +17,7 @@ def extract_first_name(name):
         return ''
     parts = name.split(',')
     if len(parts) > 1:
-        # Название после запятой: " Lastname, Firstname"
         first_part = parts[1]
-        # Уберем лишние пробелы и возьмем последние слова (часто это имя)
         first_name = first_part.strip().split(' ')[-1]
         return first_name
     return ''
